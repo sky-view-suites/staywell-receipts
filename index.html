@@ -6,7 +6,7 @@
     <title>StayWell Receipts</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <link rel="stylesheet" href="https://use.typekit.net/dqi5aaa.css">
+   
 
 
     <style>
@@ -82,6 +82,7 @@
             font-family: sofia-pro, sans-serif;
             font-style: normal;
             font-weight: 600;
+            -webkit-print-color-adjust: exact !important;
         }
         
         .bluetxt {
@@ -101,73 +102,17 @@
         .cell {
             padding: 2px 15px 2px 8px;
             vertical-align: middle;
-            
-            
-  
         }
         
-        .yote{
-            background-color: #f9f9f9;
-            height:400px;
-        }
-        
+       
         .row2 {
             background-color: #e8e8e8;
         }
         
-        table {
-            width: 100%;
-            text-align: left;
-            border-collapse: collapse;
-        }
+     
         
-        th {
-            padding: 4px 15px 4px 15px;
-            margin: 0px;
-        }
-        
-        td {
-            margin: 0px;
-            padding: 4px 15px 4px 15px;
-        }
-        
-        .w75 {
-            width: 75%;
-        }
-        
-        h2 {
-            font-family: 'Europa';
-            font-weight: 100;
-            font-style: normal;
-            line-height: 29px;
-            font-size: 23px;
-            color: #28304E;
-            margin-top: 20px;
-            margin-bottom: 25px;
-        }
-        
-        h3 {
-            font-family: 'sofia-pro', sans-serif;
-            font-weight: 800;
-            font-style: normal;
-            line-height: auto;
-            font-size: 48px;
-            line-height: 55px;
-            color: #28304E;
-            margin-bottom: 20px;
-            margin-top: 0px;
-        }
-        
-        h4 {
-            font-family: 'sofia-pro', sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            line-height: auto;
-            font-size: 26px;
-            line-height: 30px;
-            color: #28304E;
-            margin: 0px;
-        }
+    
+   
         
         .v-marg10 {
             margin-top: 0px;
@@ -184,8 +129,8 @@
             margin-bottom: 5px;
         }
         
-        .text-right{
-            text-align:right;
+        .text-right {
+            text-align: right;
         }
         
         .sign {
@@ -195,23 +140,7 @@
             transform: translateX(-7px);
         }
         
-        .section2 {
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-            background-image: url(img/wave2.svg);
-            padding: 70px 0px 0px 0px;
-        }
-        
-        .footer {
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: top;
-            background-image: url(img/wave2%20copy.svg);
-            padding-top: 70px;
-            padding-bottom: 70px;
-        }
-        
+  
         p {
             font-family: Circular Std, sans-serif;
             font-weight: 300;
@@ -237,9 +166,8 @@
         }
         
         .cell-align {
-            width:400px;
+            width: 400px;
             justify-content: space-between;
-            
         }
         
         .bold-lrg {
@@ -283,13 +211,12 @@
             justify-content: space-between;
         }
         
-        .b-width{
-            width:400px;
-            
+        .b-width {
+            width: 400px;
         }
         
-        .grey{
-            color:slategrey;
+        .grey {
+            color: slategrey;
         }
         
         .mx-auto {
@@ -301,8 +228,6 @@
             text-align: center;
             max-width: 400px;
         }
-        
-      
         
         .doc-set {
             width: 100%;
@@ -319,10 +244,7 @@
             margin-bottom: 20px;
         }
         
-        .reverse {
-            margin-top: -200px;
-            flex-direction: column-reverse;
-        }
+     
         
         .logo {
             width: 130px;
@@ -335,9 +257,7 @@
             margin: 0px;
         }
         
-        .body{
-            -webkit-print-color-adjust: exact !important;
-        }
+      
 
     </style>
 
@@ -361,16 +281,16 @@
 
         <div class="mx-auto v-marg10 space-bet h-flex align-bottom">
             <img class="logo" src="img/RoofLogo.webp">
-            <p class="bold-sml date">September 29th 2019</p>
+            <p class="bold-sml date">[September 29th 2019]</p>
         </div>
 
         <div class="mx-auto space-bet h-flex align-bottom">
             <div class="v-flex">
-                <p class="bold-sml">Jane Doe</p>
-                <p>10 Capreol Court
-                    <br> Unit 0000
-                    <br> Toronto, ON
-                    <br> M5V 4B5</p>
+                <p class="bold-sml">[Jane Doe]</p>
+                <p>[10 Capreol Court]
+                    <br> [Unit 0000]
+                    <br> [Toronto, ON]
+                    <br> [M5V 4B5]</p>
             </div>
 
 
@@ -393,11 +313,11 @@
     <section class="doc-set mx-auto ">
 
         <div class=" v-marg5 space-bet para v-flex ">
-            <p class="v-marg5">Thank you [Donor],</p>
+            <p class="v-marg5">Thank you [donor_name],</p>
             <p class="v-marg5">
                 Your generosity goes a long way in ensuring that Canadians in need of specialized treatment and procedures actually receive the care they require.</p>
             <p class="v-marg5">
-                All proceeds go directly to subsidizing temporary housing for Canadian patients who require re-location for majour treatment, but can not afford to do so.</p>
+                All proceeds go directly to subsidizing temporary housing for Canadian patients who require re-location for major treatment, but can not afford to do so.</p>
             <p class="v-marg5">
                 Caring donors such as yourself not only materially support those in need, but additionally support the Staywell charity in bringing the issues of accessible healthcare to the forefront of public policy.</p>
             <p class="v-marg5">
@@ -456,9 +376,9 @@
                         <p class="smlr ">{receipt_num}</p>
                     </div>
                 </div>
-            </div>       
-            
-            
+            </div>
+
+
             <div class="h-flex row1 space-bet ">
                 <div class="cell">
                     <p class="smlr">10 Capreol Court</p>
@@ -472,7 +392,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="h-flex row2 space-bet ">
                 <div class="cell">
                     <p class="smlr">Unit 000</p>
@@ -486,10 +406,10 @@
                     </div>
                 </div>
             </div>
-               
-        
-        
-        <div class="h-flex row1 space-bet ">
+
+
+
+            <div class="h-flex row1 space-bet ">
                 <div class="cell">
                     <p class="smlr">Toronto, ON</p>
                 </div>
@@ -502,9 +422,9 @@
                     </div>
                 </div>
             </div>
-            
-                 
-        <div class="h-flex row2 space-bet ">
+
+
+            <div class="h-flex row2 space-bet ">
                 <div class="cell">
                     <p class="smlr">M5V 4B3</p>
                 </div>
@@ -517,27 +437,27 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
-        
+
         <div class="h-flex space-bet">
             <div class="v-flex">
                 <img class="sign" src="img/79032300_563677044458251_8199556235553406976_n.png">
-                 <p class="v-marg5 bold-sml">
-                        Stefan Weldishofer, Director
-                        <br> Staywell Charity</p>
-                
+                <p class="v-marg5 bold-sml">
+                    Stefan Weldishofer, Director
+                    <br> Staywell Charity</p>
+
             </div>
-            
-             <div class="v-flex space-bet">
+
+            <div class="v-flex space-bet">
                 <p class="grey">Donations are tax deductible to the extent permitted by law</p>
-                 <p class="v-marg5 text-right ">
-                        Organization Number: 721654127 RR 0001 
-                     <br> <span class="red-text">info@staywell.charity </span>| <span class="red-text">www.staywell.charity</span> </p>
-                
+                <p class="v-marg5 text-right ">
+                    Organization Number: 721654127 RR 0001
+                    <br> <span class="red-text">info@staywell.charity </span>| <span class="red-text">www.staywell.charity</span> </p>
+
             </div>
-            
-        
+
+
         </div>
 
 
@@ -546,4 +466,4 @@
 
 
     </section>
-    </body>
+</body>
