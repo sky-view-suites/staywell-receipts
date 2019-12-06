@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>StayWell Receipts</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="stylesheet" href="https://use.typekit.net/dqi5aaa.css">
+
+
+    <style>
+        @font-face {
+            font-family: 'Circular Std';
+            src: url('/fonts/CircularStd-Black.eot');
+            src: url('/fonts/CircularStd-Black.eot?#iefix') format('embedded-opentype'), url('/fonts/CircularStd-Black.woff') format('woff'), url('/fonts/CircularStd-Black.ttf') format('truetype'), url('/fonts/CircularStd-Black.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+            font-weight: 800;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Circular Std';
+            src: url('/fonts/CircularStd-BlackItalic.eot');
+            src: url('/fonts/CircularStd-BlackItalic.eot?#iefix') format('embedded-opentype'), url('/fonts/CircularStd-BlackItalic.woff') format('woff'), url('/fonts/CircularStd-BlackItalic.ttf') format('truetype'), url('/fonts/CircularStd-BlackItalic.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+            font-weight: 800;
+            font-style: italic;
+        }
+        
+        @font-face {
+            font-family: 'Circular Std';
+            src: url('/fonts/CircularStd-Bold.eot');
+            src: url('/fonts/CircularStd-Bold.eot?#iefix') format('embedded-opentype'), url('/fonts/CircularStd-Bold.woff') format('woff'), url('/fonts/CircularStd-Bold.ttf') format('truetype'), url('/fonts/CircularStd-Bold.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+            font-weight: 600;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Circular Std';
+            src: url('/fonts/CircularStd-BoldItalic.eot');
+            src: url('/fonts/CircularStd-BoldItalic.eot?#iefix') format('embedded-opentype'), url('/fonts/CircularStd-BoldItalic.woff') format('woff'), url('/fonts/CircularStd-BoldItalic.ttf') format('truetype'), url('/fonts/CircularStd-BoldItalic.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+            font-weight: 600;
+            font-style: italic;
+        }
+        
+        @font-face {
+            font-family: 'Circular Std';
+            src: url('/fonts/CircularStd-Medium.eot');
+            src: url('/fonts/CircularStd-Medium.eot?#iefix') format('embedded-opentype'), url('/fonts/CircularStd-Medium.woff') format('woff'), url('/fonts/CircularStd-Medium.ttf') format('truetype'), url('/fonts/CircularStd-Medium.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+            font-weight: 500;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Circular Std';
+            src: url('/fonts/CircularStd-MediumItalic.eot');
+            src: url('/fonts/CircularStd-MediumItalic.eot?#iefix') format('embedded-opentype'), url('/fonts/CircularStd-MediumItalic.woff') format('woff'), url('/fonts/CircularStd-MediumItalic.ttf') format('truetype'), url('/fonts/CircularStd-MediumItalic.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+            font-weight: 500;
+            font-style: italic;
+        }
+        
+        @font-face {
+            font-family: 'Circular Std';
+            src: url('/fonts/CircularStd-Book.eot');
+            src: url('/fonts/CircularStd-Book.eot?#iefix') format('embedded-opentype'), url('/fonts/CircularStd-Book.woff') format('woff'), url('/fonts/CircularStd-Book.ttf') format('truetype'), url('/fonts/CircularStd-Book.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Circular Std';
+            src: url('/fonts/CircularStd-BookItalic.eot');
+            src: url('/fonts/CircularStd-BookItalic.eot?#iefix') format('embedded-opentype'), url('/fonts/CircularStd-BookItalic.woff') format('woff'), url('/fonts/CircularStd-BookItalic.ttf') format('truetype'), url('/fonts/CircularStd-BookItalic.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+            font-weight: 400;
+            font-style: italic;
+        }
+        
+        :focus {
+            outline: 0;
+        }
+        
+        body {
+            font-family: sofia-pro, sans-serif;
+            font-style: normal;
+            font-weight: 600;
+        }
+        
+        .bluetxt {
+            color: #108AF9;
+        }
+        
+        .red-text {
+            color: #EE7476;
+        }
+        
+        .row1 {
+            background-color: #f9f9f9;
+            align-items: center;
+            margin: 0px;
+        }
+        
+        .cell {
+            padding: 2px 15px 2px 8px;
+            vertical-align: middle;
+            
+            
+  
+        }
+        
+        .yote{
+            background-color: #f9f9f9;
+            height:400px;
+        }
+        
+        .row2 {
+            background-color: #e8e8e8;
+        }
+        
+        table {
+            width: 100%;
+            text-align: left;
+            border-collapse: collapse;
+        }
+        
+        th {
+            padding: 4px 15px 4px 15px;
+            margin: 0px;
+        }
+        
+        td {
+            margin: 0px;
+            padding: 4px 15px 4px 15px;
+        }
+        
+        .w75 {
+            width: 75%;
+        }
+        
+        h2 {
+            font-family: 'Europa';
+            font-weight: 100;
+            font-style: normal;
+            line-height: 29px;
+            font-size: 23px;
+            color: #28304E;
+            margin-top: 20px;
+            margin-bottom: 25px;
+        }
+        
+        h3 {
+            font-family: 'sofia-pro', sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            line-height: auto;
+            font-size: 48px;
+            line-height: 55px;
+            color: #28304E;
+            margin-bottom: 20px;
+            margin-top: 0px;
+        }
+        
+        h4 {
+            font-family: 'sofia-pro', sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            line-height: auto;
+            font-size: 26px;
+            line-height: 30px;
+            color: #28304E;
+            margin: 0px;
+        }
+        
+        .v-marg10 {
+            margin-top: 0px;
+            margin-bottom: 30px;
+        }
+        
+        .v-marg-cut {
+            margin-top: 5px;
+            margin-bottom: 16px;
+        }
+        
+        .v-marg5 {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .text-right{
+            text-align:right;
+        }
+        
+        .sign {
+            margin-top: 10px;
+            width: 180px;
+            height: auto;
+            transform: translateX(-7px);
+        }
+        
+        .section2 {
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            background-image: url(img/wave2.svg);
+            padding: 70px 0px 0px 0px;
+        }
+        
+        .footer {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top;
+            background-image: url(img/wave2%20copy.svg);
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+        
+        p {
+            font-family: Circular Std, sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 12px;
+            line-height: 20px;
+            color: #444444;
+            margin: 0px 5px 0px 5px;
+        }
+        
+        .bold-sml {
+            font-weight: 600;
+        }
+        
+        .bold-smlr {
+            font-weight: 600;
+            font-size: 12px;
+        }
+        
+        .smlr {
+            font-weight: 400;
+            font-size: 12px;
+        }
+        
+        .cell-align {
+            width:400px;
+            justify-content: space-between;
+            
+        }
+        
+        .bold-lrg {
+            font-size: 25px;
+            font-weight: 800;
+            color: #494444;
+            margin-bottom: 8px;
+            margin-top: 0px;
+        }
+        
+        .h-flex {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .align-bottom {
+            align-items: flex-end;
+        }
+        
+        .align-center {
+            align-items: center;
+        }
+        
+        .v-flex {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .text-box {
+            width: 318px;
+            transform: translateY(14px);
+        }
+        
+        .para {
+            width: 90%;
+            padding-left: 0px;
+        }
+        
+        .space-bet {
+            align-content: space-between;
+            justify-content: space-between;
+        }
+        
+        .b-width{
+            width:400px;
+            
+        }
+        
+        .grey{
+            color:slategrey;
+        }
+        
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .text-center {
+            text-align: center;
+            max-width: 400px;
+        }
+        
+      
+        
+        .doc-set {
+            width: 100%;
+            max-width: 1200px;
+            max-height: 2220px;
+            box-sizing: border-box;
+        }
+        
+        .cut-line {
+            border-top: 2px dashed #CFCFCF;
+        }
+        
+        .section1 {
+            margin-bottom: 20px;
+        }
+        
+        .reverse {
+            margin-top: -200px;
+            flex-direction: column-reverse;
+        }
+        
+        .logo {
+            width: 130px;
+            height: auto;
+            transform: translate(-8px, 3px);
+        }
+        
+        .date {
+            width: 140px;
+            margin: 0px;
+        }
+        
+        .body{
+            -webkit-print-color-adjust: exact !important;
+        }
+
+    </style>
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+<body>
+
+    <!--Header Section and Addresses-->
+
+    <section class="doc-set section1 mx-auto">
+
+        <div class="mx-auto v-marg10 space-bet h-flex align-bottom">
+            <img class="logo" src="img/RoofLogo.webp">
+            <p class="bold-sml date">September 29th 2019</p>
+        </div>
+
+        <div class="mx-auto space-bet h-flex align-bottom">
+            <div class="v-flex">
+                <p class="bold-sml">Jane Doe</p>
+                <p>10 Capreol Court
+                    <br> Unit 0000
+                    <br> Toronto, ON
+                    <br> M5V 4B5</p>
+            </div>
+
+
+            <div class="v-flex ">
+                <p class="bold-sml date">Staywell Charity</p>
+                <p class="date">157 Adelaide Street
+                    <br> Suite #111
+                    <br> Toronto, ON
+                    <br> M5H 4E7</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!--    Letter section and Notes-->
+
+    <section class="doc-set mx-auto ">
+
+        <div class=" v-marg5 space-bet para v-flex ">
+            <p class="v-marg5">Thank you [Donor],</p>
+            <p class="v-marg5">
+                Your generosity goes a long way in ensuring that Canadians in need of specialized treatment and procedures actually receive the care they require.</p>
+            <p class="v-marg5">
+                All proceeds go directly to subsidizing temporary housing for Canadian patients who require re-location for majour treatment, but can not afford to do so.</p>
+            <p class="v-marg5">
+                Caring donors such as yourself not only materially support those in need, but additionally support the Staywell charity in bringing the issues of accessible healthcare to the forefront of public policy.</p>
+            <p class="v-marg5">
+                If you would like to know more about our work, and how you can be of further assistance, please contact donor services at <span class="red-text">info@staywell.charity.</span></p>
+            <p class="v-marg5">
+                If you have any question about your donation or receipts please email <span class="red-text"> receipts@staywell.charity</span></p>
+            <p class="v-marg5">
+                On behalf of our entire charity and Canadian patients in need, we thank you for your donation and willing spirit.</p>
+
+            <img class="sign" src="img/79032300_563677044458251_8199556235553406976_n.png">
+            <div class="h-flex space-bet">
+                <div>
+                    <p class="v-marg5 bold-sml">
+                        Stefan Weldishofer, Director
+                        <br> Staywell Charity</p>
+                </div>
+                <div>
+                    <p class="v-marg5">
+                        Canada Revenue Agency/Agence du revenu du Canada:
+                        <br> www.canada.ca/charities-giving</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--    Footer/Cut Off Section-->
+
+    <section class="doc-set cut-line mx-auto">
+
+        <div class=" para v-marg-cut space-bet h-flex align-bottom">
+            <img class="logo" src="img/RoofLogo.webp">
+            <div class="v-flex text-box">
+                <p class="bold-lrg ">Official Donation Receipt</p>
+                <p>Official Receipt for income tax purposes
+                    <br> Reçu officiel pour l’impôt sur le revenue</p>
+            </div>
+        </div>
+
+        <div class="v-flex">
+            <div class="h-flex row1 ">
+                <div class="cell">
+                    <p class="red-text bold-smlr">Donation Details</p>
+                </div>
+            </div>
+
+            <div class="h-flex row2 space-bet ">
+                <div class="cell">
+                    <p class=" bold-smlr">Jane Doe</p>
+                </div>
+                <div class="h-flex  cell-align">
+                    <div class="cell ">
+                        <p class="smlr ">Receipt Number / Numéro de reçu: </p>
+                    </div>
+                    <div class="cell ">
+                        <p class="smlr ">{receipt_num}</p>
+                    </div>
+                </div>
+            </div>       
+            
+            
+            <div class="h-flex row1 space-bet ">
+                <div class="cell">
+                    <p class="smlr">10 Capreol Court</p>
+                </div>
+                <div class="h-flex cell-align">
+                    <div class="cell ">
+                        <p class="smlr ">Date Issued / Date d’émission:</p>
+                    </div>
+                    <div class="cell ">
+                        <p class="smlr ">{issue_date}</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="h-flex row2 space-bet ">
+                <div class="cell">
+                    <p class="smlr">Unit 000</p>
+                </div>
+                <div class="h-flex cell-align">
+                    <div class="cell ">
+                        <p class="smlr ">Donation Date / Date du don:</p>
+                    </div>
+                    <div class="cell ">
+                        <p class="smlr ">{donation_date}</p>
+                    </div>
+                </div>
+            </div>
+               
+        
+        
+        <div class="h-flex row1 space-bet ">
+                <div class="cell">
+                    <p class="smlr">Toronto, ON</p>
+                </div>
+                <div class="h-flex cell-align">
+                    <div class="cell ">
+                        <p class="smlr ">Location Issued / Lieu de la délivrance:</p>
+                    </div>
+                    <div class="cell ">
+                        <p class="smlr ">{donation_loc}</p>
+                    </div>
+                </div>
+            </div>
+            
+                 
+        <div class="h-flex row2 space-bet ">
+                <div class="cell">
+                    <p class="smlr">M5V 4B3</p>
+                </div>
+                <div class="h-flex cell-align">
+                    <div class="cell ">
+                        <p class="smlr ">Amount / Montant:</p>
+                    </div>
+                    <div class="cell ">
+                        <p class="smlr ">${donation_amount}</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="h-flex space-bet">
+            <div class="v-flex">
+                <img class="sign" src="img/79032300_563677044458251_8199556235553406976_n.png">
+                 <p class="v-marg5 bold-sml">
+                        Stefan Weldishofer, Director
+                        <br> Staywell Charity</p>
+                
+            </div>
+            
+             <div class="v-flex space-bet">
+                <p class="grey">Donations are tax deductible to the extent permitted by law</p>
+                 <p class="v-marg5 text-right ">
+                        Organization Number: 721654127 RR 0001 
+                     <br> <span class="red-text">info@staywell.charity </span>| <span class="red-text">www.staywell.charity</span> </p>
+                
+            </div>
+            
+        
+        </div>
+
+
+
+
+
+
+    </section>
+    </body>
