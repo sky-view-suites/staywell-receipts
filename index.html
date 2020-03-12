@@ -324,11 +324,11 @@
       <table class="mx-auto v-marg10 space-bet h-flex align-bottom">
         <tr class="">
           <td valign="bottom" style="width:2000px;">
-            <img class="logo" src="img/RoofLogo.webp" />
+            <img class="logo" src="https://storage.googleapis.com/staywell/logo_new.png" />
           </td>
 
           <td>
-            <p class="bold-sml date">[September 29th 2019]</p>
+            <p class="bold-sml date">{{substr($receipt[0]->created_at, 0, 10)}}</p>
           </td>
         </tr>
       </table>
@@ -337,13 +337,12 @@
 
       <div class="mx-auto space-bet h-flex align-bottom">
         <div class="v-flex">
-          <p class="bold-sml">[Jane Doe]</p>
-          <p>
-            [10 Capreol Court] <br />
-            [Unit 0000] <br />
-            [Toronto, ON] <br />
-            [M5V 4B5]
-          </p>
+            <p class="bold-sml">{{$receipt[0]->first_name}} {{$receipt[0]->middle_initial}} {{$receipt[0]->last_name}}</p>
+            <p>{{$receipt[0]->address}}
+                <br> {{$receipt[0]->city_town}}, {{$receipt[0]->provence_state}}
+                <br>{{$receipt[0]->postal_zip}}
+                <br>{{$receipt[0]->country}}</p>
+
         </div>
 
         <div class="v-flex ">
@@ -364,7 +363,7 @@
       <table class="">
         <tr class="para">
           <td class="para">
-            <p class="v-marg5">Thank you [donor_name],</p>
+            <p class="v-marg5">Thank you {{$receipt[0]->first_name}},</p>
             <p class="v-marg5">
               Your generosity goes a long way in ensuring that Canadians in need
               of specialized treatment and procedures actually receive the care
@@ -401,10 +400,7 @@
       <table class="doc-set mx-auto ">
         <tr class="width100">
           <td class="rev">
-            <img
-              class="sign"
-              src="img/79032300_563677044458251_8199556235553406976_n.png"
-            />
+            <img class="sign" src="https://storage.googleapis.com/staywell/Stefan%20W.png">
             <p class="v-marg5 bold-sml">
               Stefan Weldishofer, Director
               <br />
@@ -431,66 +427,53 @@
 
         <tr class="row2  ">
           <td class="cell type">
-            <p class=" bold-smlr">Jane Doe</p>
+            <p class=" bold-smlr">{{$receipt[0]->first_name}} {{$receipt[0]->middle_initial}} {{$receipt[0]->last_name}}</p>
           </td>
           <td class=" ">
             <p class="smlr ">Receipt Number / Numéro de reçu:</p>
           </td>
 
           <td>
-            <p class="smlr ">{receipt_num}</p>
+            <p class="smlr ">{{$receipt[0]->id}}</p>
           </td>
         </tr>
 
         <tr class="row1  ">
           <td class="cell type">
-            <p class="smlr">10 Capreol Court</p>
+            <p class="smlr">{{$receipt[0]->address}}</p>
           </td>
           <td class=" ">
             <p class="smlr ">Date Issued / Date d’émission:</p>
           </td>
 
           <td>
-            <p class="smlr ">{issue_date}</p>
+            <p class="smlr ">{{substr($receipt[0]->created_at, 0, 10)}}</p>
           </td>
         </tr>
 
         <tr class="row2  ">
           <td class="cell type">
-            <p class="smlr">Unit 000</p>
-          </td>
-          <td class=" ">
-            <p class="smlr ">Donation Date / Date du don:</p>
-          </td>
-
-          <td>
-            <p class="smlr ">{donation_date}</p>
-          </td>
-        </tr>
-
-        <tr class="row1  ">
-          <td class="cell type">
-            <p class="smlr">Toronto, ON</p>
+            <p class="smlr">{{$receipt[0]->city_town}}, {{$receipt[0]->provence_state}}</p>
           </td>
           <td class=" ">
             <p class="smlr ">Location Issued / Lieu de la délivrance:</p>
           </td>
 
           <td>
-            <p class="smlr ">{donation_loc}</p>
+            <p class="smlr ">Toronto, ON</p>
           </td>
         </tr>
 
-        <tr class="row2  ">
+        <tr class="row1  ">
           <td class="cell type">
-            <p class="smlr">M5V 4B3</p>
+            <p class="smlr">{{$receipt[0]->postal_zip}}</p>
           </td>
           <td class=" ">
             <p class="smlr ">Amount / Montant:</p>
           </td>
 
           <td>
-            <p class="smlr ">${donation_amount}</p>
+            <p class="smlr ">${{$receipt[0]->amount}}</p>
           </td>
         </tr>
       </table>
